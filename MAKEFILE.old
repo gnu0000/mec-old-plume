@@ -1,0 +1,12 @@
+ALL: PLUME.EXE
+
+
+plume.obj : plume.c
+#   cl -c -AL -W3 -Od -Zip -nologo $*.c
+   cl -c -AL -W3 -Od -nologo $*.c
+
+plume.exe : plume.obj
+#    link /Co $* /co/noe/nod/nologo,,$*,os2 GNULIBD llibcep,$*
+    link /Co $* /noe/nod/nologo,,$*,os2 GNULIBD llibcep,$*
+    bind $*.exe
+
